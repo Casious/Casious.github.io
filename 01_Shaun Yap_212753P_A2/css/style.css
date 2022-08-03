@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+}
+/* Set bg color */
+body {
+     /*background: linear-gradient(to right, rgba(2,0,36,1) 0%, rgba(22,183,230,1) 35%, rgba(0,212,255,1) 100%);*/
+     background: linear-gradient(to right, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+}
+header {
+  display:flex;
+  flex-flow:row;
+  flex-flow:wrap;
+  position: sticky;
+  top:0;
+  z-index:2;
+  background-color:wheat;  
+  flex-basis: 100%;
+  height:4em;
+  
+}
+.ulTop{ /* For button, selection of page */
+  list-style-type:none ;
+  list-style-position: inside;
+  line-height: 350%;
+  padding:0px;
+  margin:0px;
+  flex-basis:60%;
+}
+.liTop{ /* For button selection of page */
+  display: inline-block;
+}
+.aBox{ /* How the button looks */
+  text-decoration: none;
+  border-left:2px solid black;
+  padding: 0.2em 2em;
+  color:black;
+  background: transparent;
+  text-transform: uppercase;
+
+}
+.h1Topic { /* Align top text to left */
+  line-height: 50%;
+  flex-basis:40%;
+}
+#menu { /*icon */
+  padding-left: 1%;
+  line-height: 150%;
+  font-size: 40px;
+  flex-basis:5%;
+
+}
+h2 {
+  display:flex;
+  flex-flow:row;
+  flex-flow:wrap;
+  flex-basis: 75%;
+
+}
+#playMusic,#playMusic2,#playMusic3,#playMusic4,#playMusic5,#playMusic6,#playMusic7 {
+  margin-left: 50%;
+  flex-basis: 25%;
+  border: solid black;
+  border-radius: 25%;
+  padding: 10%;
+}
+nav {
+  background-color:wheat;
+  width:300px;
+  height:100%;
+  z-index:2 ;
+  margin-left: -0.5em;
+  position:absolute;
+  /* This transforms moves the drawer off canvas */
+  transform:translate(-300px,0);
+  /* Optionally,we animated the drawer */
+  transition: transform 1s ease;
+}
+.open {
+    transform:translate(0,0) ;
+}
+.menuTitle { /* title in nav menu */
+  padding-left: 0.5em;
+}
+/* Making of the timeline (Vertical line in the middle) */
+.timeline { /* essentially limiting the width of the whole timeline */
+    position: relative;
+    max-width: 75em;
+    margin: 0 auto;
+}
+.timeline::after {
+    content:'';
+    background-color: white;
+    position:absolute;
+    width:0.375em;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left: -0.1875em;
+}
+/*container surrounding content */
+.container {
+    padding: 0.625em 2.5em;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 1.5625em;
+    height: 1.5625em;
+    right: -1.0625em;
+    background-color: white;
+    border: 0.25em solid #FF9F55;
+    top: 0.9375em;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 1.375em;
+    width: 0;
+    z-index: 1;
+    right: 1.875em;
+    border: medium solid white;
+    border-width: 0.625em 0 0.625em 0.625em;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 1.375em;
+    width: 0;
+    z-index: 1;
+    left: 1.875em;
+    border: medium solid white;
+    border-width: 0.625em 0.625em 0.625em 0;
+    border-color: transparent white transparent transparent; /* top right bottom left */
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -1em;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 1.25em 1.875em;
+    background-color: white;
+    position: relative;
+    border-radius: 0.3529em;
+  }
+ #menu:active,  #playMusic:active,   #playMusic2:active,   #playMusic3:active,   #playMusic4:active, #playMusic5:active,  #playMusic6:active,  #playMusic7:active   {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24)
+    /* Lowering the shadow */
+  }
+
+  /*responsive PC  bigger than or equal to 1080px*/
+  @media screen and (min-width: 1080px) { 
+    #menu {
+      display:none;
+    }
+  }
+
+
+   /*responsive tablet bigger than or equal to 720 and less that 1080*/
+   @media screen and (min-width:720px) and (max-width: 1079px){
+    .ulTop{
+      display: none;
+    }
+    #menu { /*icon */
+      padding-left: 1%;
+      padding-right: 1%;
+      line-height: 150%;
+      font-size: 40px;
+      flex-basis:5%;
+    }
+    .h1Topic { /* Align top text to left */
+      line-height: 50%;
+      flex-basis:87%;
+      text-align: center;
+    }
+    }
+
+  /*responsive mobile less than 720px*/
+  @media screen and (max-width: 719px) {
+    .ulTop{
+      display: none;
+    }
+    #menu { /*icon */
+      padding-left: 1%;
+      padding-right: 1%;
+      line-height: 210%;
+      font-size: 30px;
+      flex-basis:5%;
+    }
+    .h1Topic { /* Align top text to left */
+      line-height: 50%;
+      flex-basis:80%;
+    }
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 1.9375em;
+    }
+  
+  /* Full-width container */
+    .container {
+      width: 100%;
+      padding-left: 4.375em;
+      padding-right: 1.5625em;
+    }
+  
+  /* all arrows are pointing left */
+    .container::before {
+      left: 3.75em;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* all circles are at the same spot */
+    .left::after, .right::after {
+      left: 0.9375em;
+    }
+  
+  /*all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+
+    nav {
+      background-color:wheat;
+      width:300px;
+      height:100%;
+      z-index:2 ;
+      margin-left: -0.5em;
+      position:absolute;
+      /* This transforms moves the drawer off canvas */
+      transform:translate(-300px,0);
+      /* Optionally,we animated the drawer */
+      transition: transform 1s ease;
+    }
+    .open {
+        transform:translate(0,0) ;
+    }
+    .menuTitle {
+      padding-left: 0.5em;
+    }
+  }
