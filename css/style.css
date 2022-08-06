@@ -451,4 +451,8 @@ nav {
     .menuTitle {
       padding-left: 0.5em;
     }
+    .menuButton { /* background color for nav */
+      margin-top: -1%;
+      background-color: wheat;
+    }
   }
