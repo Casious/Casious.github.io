@@ -253,6 +253,8 @@ nav {
     border: solid black;
     border-radius: 25%;
     padding: 2%;
+    min-width: 1.5em;
+    max-width: 2em;
   }
   .selectButton:active,.image2:active ,.image:active,#menu:active,  #playMusic:active,   #playMusic2:active,   #playMusic3:active,   #playMusic4:active, #playMusic5:active,  #playMusic6:active,  #playMusic7:active   {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -283,6 +285,9 @@ nav {
       border-radius: 25%;
       padding: 2%;
       transform: scale(0.5);
+      min-width: 1.5em;
+      max-width: 2em;
+      margin-top: -2%;
     }
       /* all arrows are pointing left */
       .left {
@@ -342,6 +347,9 @@ nav {
       padding: 2%;
       margin-top: -7%;
       transform:scale(0.4);
+      min-width: 1.5em;
+      max-width: 2em;
+      margin-top: -1.5%;
     }
     .image {
       padding: 0.625em 2.5em;
