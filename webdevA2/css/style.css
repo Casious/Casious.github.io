@@ -277,11 +277,27 @@ nav {
     #menu {
       display:none;
     }
+    .QRCODE {
+      display:flex;
+      flex-flow:row;
+      flex-flow:wrap;
+      position: sticky;
+      bottom:0;
+      min-height: 4em;
+      max-height: 4em;
+      min-width: 4em;
+      max-width: 4em;
+      margin-left: 95%;
+
+    }
   }
 
 
    /*responsive tablet bigger than or equal to 720 and less that 1080*/
    @media screen and (min-width:720px) and (max-width: 1400px){
+    .QRCODE {
+      display:none;
+    }
     #playMusic, #playMusic2, #playMusic3, #playMusic4, #playMusic5, #playMusic6, #playMusic7 { /*sound image border etc */
       cursor: pointer;
       margin-left: 3%;
@@ -346,6 +362,9 @@ nav {
 
   /*responsive mobile less than 720px*/
   @media screen and (max-width: 719px) {
+    .QRCODE {
+      display:none;
+    }
     #playMusic, #playMusic2, #playMusic3, #playMusic4, #playMusic5, #playMusic6, #playMusic7 { /*sound image border etc */
       cursor: pointer;
       flex-basis: 20%;
