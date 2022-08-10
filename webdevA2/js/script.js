@@ -40,6 +40,12 @@ for (let i=0; i < right.length; i++) {
 // For changing between sound playing and not playing 
 
 var player=document.querySelector('#player');
+var player=document.querySelector('#player2');
+var player=document.querySelector('#player3');
+var player=document.querySelector('#player4');
+var player=document.querySelector('#player5');
+var player=document.querySelector('#player6');
+var player=document.querySelector('#player7');
 function changeImage(){
     document.getElementById('playMusic').src="images/sound.png" 
     document.getElementById('playMusic2').src="images/sound.png";
@@ -55,36 +61,48 @@ if (player){ //prevent null error
         document.getElementById('playMusic').src="images/soundactive.png"
         setTimeout(changeImage,4500);
     });
+};
+if (player2){ //prevent null error
     var player2=document.querySelector('#player2')
     playMusic2.addEventListener('click',function(){
         player2.play();
         document.getElementById('playMusic2').src="images/soundactive.png"; 
         setTimeout(changeImage,4000);
     });
+};
+if (player3){ //prevent null error
     var player3=document.querySelector('#player3')
     playMusic3.addEventListener('click',function(){
         player3.play();
         document.getElementById('playMusic3').src="images/soundactive.png";
         setTimeout(changeImage,4200);
     });
+};
+if (player4){ //prevent null error
     var player4=document.querySelector('#player4')
     playMusic4.addEventListener('click',function(){
         player4.play();
         document.getElementById('playMusic4').src="images/soundactive.png";
         setTimeout(changeImage,4200);
     });
+};
+if (player5){ //prevent null error
     var player5=document.querySelector('#player5')
     playMusic5.addEventListener('click',function(){
         player5.play();
         document.getElementById('playMusic5').src="images/soundactive.png";
         setTimeout(changeImage,4000);
     });
+};
+if (player6){ //prevent null error
     var player6=document.querySelector('#player6')
     playMusic6.addEventListener('click',function(){
         player6.play();
         document.getElementById('playMusic6').src="images/soundactive.png";
         setTimeout(changeImage,4000);
     });
+};
+if (player7){ //prevent null error
     var player7=document.querySelector('#player7')
     playMusic7.addEventListener('click',function(){
         player7.play();
