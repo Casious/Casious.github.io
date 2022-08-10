@@ -40,12 +40,12 @@ for (let i=0; i < right.length; i++) {
 // For changing between sound playing and not playing 
 
 var player=document.querySelector('#player');
-var player=document.querySelector('#player2');
-var player=document.querySelector('#player3');
-var player=document.querySelector('#player4');
-var player=document.querySelector('#player5');
-var player=document.querySelector('#player6');
-var player=document.querySelector('#player7');
+var player2=document.querySelector('#player2');
+var player3=document.querySelector('#player3');
+var player4=document.querySelector('#player4');
+var player5=document.querySelector('#player5');
+var player6=document.querySelector('#player6');
+var player7=document.querySelector('#player7');
 function changeImage(){
     document.getElementById('playMusic').src="images/sound.png" 
     document.getElementById('playMusic2').src="images/sound.png";
